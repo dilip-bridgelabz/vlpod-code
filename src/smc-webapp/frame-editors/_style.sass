@@ -1,0 +1,41 @@
+/*
+ *  This file is part of CoCalc: Copyright © 2020 Sagemath, Inc.
+ *  License: AGPLv3 s.t. "Commons Clause" – see LICENSE.md for details
+ */
+
+// make buttons and button-groups wrap with a larger vertical space (not 0 px)
+.cc-frame-tree-title-bar-buttons
+
+  > div.btn-group,
+  > button.btn
+    margin-bottom: 20px
+
+// same for the format bar, see
+// https://github.com/sagemathinc/cocalc/issues/3419
+.cc-frame-tree-format-bar
+  max-height: 32px
+  overflow: hidden
+
+  >div.btn-group,
+  >button.btn
+    margin-bottom: 20px
+
+
+// latex editor, build panel
+.cocalc-latex-build-content
+
+  .ant-tabs-tab
+    margin: 0  !important
+    padding: 0  !important
+    > div
+      width: 100%
+      padding: 5px 10px
+      margin: 0 10px 0 0
+      text-align: left
+
+  .ant-tabs-content-holder
+    display: flex
+
+    .ant-tabs-tabpane
+      display        : flex
+      flex-direction : column

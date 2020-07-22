@@ -1,0 +1,98 @@
+/*
+ *  This file is part of CoCalc: Copyright © 2020 Sagemath, Inc.
+ *  License: AGPLv3 s.t. "Commons Clause" – see LICENSE.md for details
+ */
+
+// #smc-file-tabs-* used in project_page.cjsx
+
+// ProjectPage
+=file-tabs-base
+  height        : 32px
+  font-size     : 10.5pt
+  border-radius : 5px 5px 0px 0px
+
+.smc-file-tabs-fixed-desktop > li > a
+  padding       : 5px
+  +file-tabs-base
+
+.smc-file-tabs-files-desktop > li > a
+  padding       : 11px 5px
+  +file-tabs-base
+  +disable-user-select
+
+// MobileProjectPage
+
+.smc-file-tabs-fixed-mobile > li > a
+  padding : 8px 10px
+
+.smc-file-tabs-files-mobile > li > a
+  padding : 13px 15px 7px
+
+// ProjectPage
+
+.list-group-header
+  list-style     : none
+  color          : $COL_GRAY
+  padding-left   : 5px
+  margin-top     : 5px
+  border-top     : 1px solid $COL_GRAY_LL
+  padding-top    : 10px
+  &:first-child
+    margin-top   : 5px
+    padding-top  : 0px
+    border-top   : none
+
+.smc-file-tab-floating
+  background-color    : $COL_BS_BLUE_BGRND
+  border-radius       : 5px 5px 0px 0px
+  box-sizing          : border-box
+  color               : rgb(51, 51, 51)
+  display             : block
+  flex-shrink         : 1
+  line-height         : normal
+  list-style-image    : none
+  list-style-position : outside
+  list-style-type     : none
+  overflow-x          : hidden
+  overflow-y          : hidden
+  position            : relative
+  text-align          : left
+  width               : 250px
+  +file-tabs-base
+
+  > a
+    color               : rgb(51, 51, 51)
+    border-radius       : 5px 5px 0px 0px
+    box-sizing          : border-box
+    display             : block
+    line-height         : normal
+    list-style-image    : none
+    list-style-position : outside
+    list-style-type     : none
+    padding             : 11px 5px
+    position            : relative
+    +file-tabs-base
+
+.highlight
+  background-color : yellow
+
+.cc-project-files-create-dropdown
+  > .dropdown.btn-group
+    display: flex
+
+.cc-project-files-path
+  .breadcrumb
+    .active
+      font-weight: bold
+
+.cc-custom-image-desc
+  h1
+    font-size: 125%
+  h2
+    font-size: 120%
+  h3
+    font-size: 115%
+  h4
+    font-size: 110%
+  h6
+    font-size: 105%
