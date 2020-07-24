@@ -54,6 +54,7 @@ KUBERNETES_LOCAL_HUB_PORT = 6000
 KUBERNETES_RAW_PORT = 6001
 KUBECTL_MAX_DELAY_S = 5
 KUBERNETES_REGISTRY = os.environ.get("KUBERNETES_REGISTRY", "sagemathinc")
+NODE_SELECTOR = os.environ.get("NODE_SELECTOR", "")
 
 
 def quota_to_int(x):
@@ -682,7 +683,7 @@ spec:
                 50, cpu_shares
             ),  # TODO: this must be less than cores or won't start, but UI doesn't restrict that
             network=network_label,
-            node_selector=node_selector,
+            node_selector=NODE_SELECTOR,
             extra_env=extra_env)
 
         # TODO: should use tempfile module
