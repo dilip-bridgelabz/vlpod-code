@@ -634,6 +634,15 @@ metadata:
     #network: "{network}"
     #node_selector: "{node_selector}"
 spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: cloud.google.com/gke-nodepool
+            operator: In
+            values:
+            - cocalc-project
   containers:
     - name: "{pod_name}"
       image: "{registry}/cocalc-kubernetes-project"
