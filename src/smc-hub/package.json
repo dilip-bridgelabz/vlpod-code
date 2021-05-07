@@ -80,7 +80,7 @@
     "temp": "^0.9.1",
     "typescript": "^3.9.2",
     "uglify-js": "^3.9.3",
-    "underscore": "^1.10.2",
+    "underscore": "^1.12.1",
     "validator": "^13.0.0",
     "winston": "^2.4.4"
   },
